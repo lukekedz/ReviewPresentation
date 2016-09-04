@@ -1,3 +1,7 @@
-<h1>{{vm.title}}</h1>
-
-<presentations-component></presentations-component>
+<div class="topBar w3-theme-d5"><span>Powered by AngularJS 1.5.8 Components, ES6, and jspm</span></div>
+<ul>
+    <li ng-repeat="item in vm.items">
+        <a ng-link={{item.link}}>{{item.title}}</a>
+    </li>
+</ul>
+<ng-outlet></ng-outlet>
