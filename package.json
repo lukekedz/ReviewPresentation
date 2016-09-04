@@ -1,0 +1,82 @@
+{
+  "name": "review-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "start": "lite-server",
+    "karma": "karma start",
+    "postinstall": "jspm install",
+    "mocha": "./node_modules/.bin/mocha --recursive --bail --compilers js:babel-core/register ./src/**/*.test.js",
+    "watch": "./node_modules/.bin/mocha --watch --recursive --bail --compilers js:babel-core/register ./src/**/*.test.js"
+  },
+  "author": {
+    "name": "Karl Shifflett",
+    "url": "http://oceanware.wordpress.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oceanware/review-presentation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oceanware/review-presentation"
+  },
+  "homepage": "https://github.com/oceanware/review-presentation",
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "impliedStrict": true
+      }
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.3.1",
+    "jasmine-core": "^2.3.4",
+    "jspm": "^0.16.13",
+    "karma": "^0.13.14",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^0.3.6",
+    "karma-jspm": "^2.0.2",
+    "karma-mocha-reporter": "^2.1.0",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-sourcemap-loader": "^0.3.5",
+    "lite-server": "^2.2.2",
+    "mocha": "^3.0.2",
+    "phantomjs": "^1.9.17",
+    "run-sequence": "^1.1.5",
+    "sinon": "^1.17.5",
+    "sinon-chai": "^2.8.0"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular": "npm:angular@^1.5.8",
+      "ngcomponentrouter": "npm:ngcomponentrouter@^2.1.0"
+    },
+    "devDependencies": {
+      "angular-mocks": "npm:angular-mocks@^1.5.8",
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
