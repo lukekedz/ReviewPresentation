@@ -1,19 +1,18 @@
-import { assert } from 'chai';
 import HomeComponent from './home.component';
 import constants from '../../constants';
 
 describe('HomeComponent', () => {
-    var vm = undefined;
+	var sut = undefined;
 
-    beforeEach(() => {
-        vm = new HomeComponent();
-    });
+	beforeEach(() => {
+		sut = new HomeComponent();
+	});
 
-    it('should have property constants', () => {
-       assert.property(vm, 'constants');
-    });
+	it('should have property constants', () => {
+		expect(sut).to.have.property('constants');
+	});
 
-    it('should have constants property CODECAMPENAME', () => {
-        assert.equal(vm.constants.CODECAMPENAME, constants.CODECAMPENAME);
-    })
+	it('should have constants property CODECAMPENAME', () => {
+		expect(sut.constants.CODECAMPENAME).to.equal(constants.CODECAMPENAME);
+	})
 });

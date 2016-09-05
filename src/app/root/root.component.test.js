@@ -1,24 +1,23 @@
-import { assert } from 'chai';
 import RootComponent from './root.component';
 import constants from '../../constants';
 
 describe('RootComponent', () => {
-	var vm = undefined;
+	var sut = undefined;
 
 	beforeEach(() => {
-		vm = new RootComponent();
+		sut = new RootComponent();
 	});
 
 	it('should have property items', () => {
-		assert.property(vm, 'items');
+		expect(sut).to.have.property('items');
 	});
 
 	it('should have an items array', () => {
-		assert.isTrue(Array.isArray(vm.items));
+		expect(Array.isArray(sut.items)).to.equal(true);
 	});
 
-	it('should have items array wiht three elements', () => {
-		assert.equal(vm.items.length, 3);
+	it('should have items array with three elements', () => {
+		expect(sut.items.length).to.equal(3);
 	});
 
 	it('should have the correct items in the array', () => {
@@ -33,7 +32,7 @@ describe('RootComponent', () => {
 			link: ['Review', 'PresentationList']
 		}];
 
-		assert.deepEqual(correctItems, vm.items);
+		expect(correctItems).to.deep.equal(sut.items);
 	});
 
 });

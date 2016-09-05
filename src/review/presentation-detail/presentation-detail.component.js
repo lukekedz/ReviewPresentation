@@ -68,7 +68,7 @@ export default class PresentationDetailComponent {
 		}
 
 		id = parseInt(id);
-		if(!Number.isInteger(id)) {
+		if (id > Number.MAX_SAFE_INTEGER) {
 			this.errorText = INVALIDPARAMETER + ' 5';
 			return;
 		}
@@ -76,6 +76,7 @@ export default class PresentationDetailComponent {
 		let presentation = this.dataService.getPresentation(id);
 		if(!presentation) {
 			this.errorText = 'Presentation not found';
+			return;
 		} else {
 			this.presentation = presentation;
 			this.title = presentation.title;
