@@ -106,6 +106,12 @@ h4 {
     font-family: sans-serif;
 }
 
+.error {
+    color: red;
+    font-size: 14pt;
+    font-family: sans-serif;
+}
+
 .topBar {
     font-size: 9pt;
     font-family: sans-serif;
@@ -119,6 +125,26 @@ h4 {
     vertical-align: middle;
     line-height: normal;
     margin-right: 10px;
+}
+
+.presentationListItem {
+    margin: 7px;
+    display: inline-block;
+}
+
+.presentationListItem a {
+    cursor: hand;
+    color: #5f2a16;
+    text-decoration: none;
+}
+
+.presentationListItem a:hover {
+    color: #d05e31;
+}
+
+.question {
+    color: #5f2a16;
+    margin: 7px;
 }
 
 ul {

@@ -11,7 +11,7 @@ let mainModule = angular.module('main', [
 ]);
 
 // must tell the Component Router which component to navigate components into
-mainModule.value('$routerRootComponent', 'rootComponent');
+mainModule.value('$routerRootComponent', 'root');
 
 angular.element(document).ready(() => {
     // bootstrap angular now that all modules have been loaded

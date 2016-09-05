@@ -1,0 +1,9 @@
+<div ng-if="vm.errorText.length > 0">
+    <span class="error">{{vm.errorText}}</span>
+</div>
+
+<div ng-if="vm.title.length > 0">
+    <h3>Reviewing: {{vm.title}}</h3>
+
+    <grade ng-repeat="question in vm.questions" question="question"></grade>
+</div>

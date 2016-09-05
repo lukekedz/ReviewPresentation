@@ -1,26 +1,44 @@
 import angular from 'angular';
 import ReviewComponent from './review/review.component';
 import PresentationListComponent from './presentation-list/presentation-list.component';
+import PresentationDetailComponent from './presentation-detail/presentation-detail.component';
+import GradeComponent from './grade/grade.component';
+import DataService from './services/dataService';
 
 export default angular
     .module('main.app.review', [])
-    .component('reviewComponent', {
+    .component('review', {
         templateUrl: '/src/review/review/review.component.html',
         controller: ReviewComponent,
         controllerAs: 'vm',
         $routeConfig: [{
             path: '/presentation-list',
-            component: 'presentationListComponent',
-            name: 'PresentationList'
+            component: 'presentationList',
+            name: 'PresentationList',
+            useAsDefault: true
         }, {
-            path: '/presentation-detail',
-            component: 'presentationsDetailComponent',
+            path: '/presentation-detail/:id',
+            component: 'presentationDetail',
             name: 'PresentationDetail'
         }]
     })
-    .component('presentationListComponent', {
+    .component('presentationList', {
         templateUrl: '/src/review/presentation-list/presentation-list.component.html',
         controller: PresentationListComponent,
         controllerAs: 'vm'
     })
+    .component('presentationDetail', {
+        templateUrl: '/src/review/presentation-detail/presentation-detail.component.html',
+        controller: PresentationDetailComponent,
+        controllerAs: 'vm'
+    })
+    .component('grade', {
+        templateUrl: '/src/review/grade/grade.component.html',
+        controller: GradeComponent,
+        controllerAs: 'vm',
+        bindings: {
+            question: "<"
+        }
+    })
+    .service('DataService', DataService)
     .name;
