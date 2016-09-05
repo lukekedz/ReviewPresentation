@@ -1,3 +1,4 @@
 module.exports = Object.freeze({
-    MAXSCORE: 10
+    MAXSCORE: 10,
+    MAXSCOREWORD: 'ten'
 });

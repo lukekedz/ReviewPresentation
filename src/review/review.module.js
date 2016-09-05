@@ -30,14 +30,18 @@ export default angular
     .component('presentationDetail', {
         templateUrl: '/src/review/presentation-detail/presentation-detail.component.html',
         controller: PresentationDetailComponent,
-        controllerAs: 'vm'
+        controllerAs: 'vm',
+        bindings: {
+            "$router": "<"
+        }
     })
     .component('grade', {
         templateUrl: '/src/review/grade/grade.component.html',
         controller: GradeComponent,
         controllerAs: 'vm',
         bindings: {
-            question: "<"
+            score: "<",
+            scoreSelected: "&"
         }
     })
     .service('DataService', DataService)

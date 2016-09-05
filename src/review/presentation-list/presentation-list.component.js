@@ -1,4 +1,4 @@
-import _ from 'underscore';
+import _ from 'lodash';
 
 export default class PresentationListComponent {
 
@@ -18,8 +18,8 @@ export default class PresentationListComponent {
 
     $routerOnActivate() {
         let data = this.dataService.getPresentations();
-        this.unreviewedPresentations = _.sortBy(_.where(data, {hasBeenReviewed: false}), 'id');
-        this.reviewedPresentations = _.sortBy(_.where(data, {hasBeenReviewed: true}), 'id');
+        this.unreviewedPresentations = _.sortBy(_.filter(data, {hasBeenReviewed: false}), 'id');
+        this.reviewedPresentations = _.sortBy(_.filter(data, {hasBeenReviewed: true}), 'id');
     }
 
 }

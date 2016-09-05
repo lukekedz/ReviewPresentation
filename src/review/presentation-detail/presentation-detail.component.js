@@ -1,11 +1,12 @@
-import _ from 'underscore';
-
+import _ from 'lodash';
+import Question from '../model/question';
 export default class PresentationDetailComponent {
 
 	questions;
 	presentation;
 	title;
 	errorText;
+	disableForm = true;
 
 	constructor(DataService) {
 		if(!DataService) {
@@ -13,6 +14,35 @@ export default class PresentationDetailComponent {
 		}
 
 		this.dataService = DataService;
+	}
+
+	save() {
+		this.checkIsFormValid();
+		if (this.disableForm) {
+			throw new Error('form is invalid');
+		}
+		this.dataService.reviewPresentation(this.presentation, this.questions);
+		this.$router.navigate(['PresentationList']);
+	}
+
+	scoreSelected(question, score) {
+		if(!question || !(question instanceof Question)) {
+			throw new Error('question is undefined, null, or not a question');
+		}
+		if(!score || !Number.isInteger(score)) {
+			throw new Error('score is undefined, null, or is not an integer');
+		}
+		if(score < 0 || score > 10) {
+			throw new Error('score out of range 0-10');
+		}
+
+		question.score = score;
+		this.checkIsFormValid();
+	}
+
+	checkIsFormValid() {
+		let check = _.find(this.questions, { 'score': 0 });
+		this.disableForm = check !== undefined;
 	}
 
 	$routerOnActivate(action) {
@@ -26,16 +56,16 @@ export default class PresentationDetailComponent {
 			this.errorText = INVALIDPARAMETER + ' 2';
 			return;
 		}
-        if(!action.params.id) {
+		if(!action.params.id) {
 			this.errorText = INVALIDPARAMETER + ' 3';
 			return;
 		}
 
-        let id = this.filterInteger(action.params.id);
-        if (isNaN(id)) {
-            this.errorText = INVALIDPARAMETER + ' 4';
+		let id = this.filterInteger(action.params.id);
+		if(isNaN(id)) {
+			this.errorText = INVALIDPARAMETER + ' 4';
 			return;
-        }
+		}
 
 		id = parseInt(id);
 		if(!Number.isInteger(id)) {
@@ -52,7 +82,6 @@ export default class PresentationDetailComponent {
 		}
 
 		this.questions = this.dataService.getQuestions();
-
 	}
 
 	filterInteger(value) {

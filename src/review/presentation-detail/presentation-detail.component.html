@@ -1,9 +1,24 @@
 <div ng-if="vm.errorText.length > 0">
-    <span class="error">{{vm.errorText}}</span>
+	<span class="error">{{vm.errorText}}</span>
 </div>
 
 <div ng-if="vm.title.length > 0">
-    <h3>Reviewing: {{vm.title}}</h3>
+	<h3>Reviewing: {{vm.title}}</h3>
 
-    <grade ng-repeat="question in vm.questions" question="question"></grade>
+	<div ng-repeat="question in vm.questions" class="question">
+	    <div class="questionTitle"><h4>{{question.title}}</h4></div>
+
+		<grade class="questionScore" score="question.score" score-selected="vm.scoreSelected(question, score)"></grade>
+
+	    <div class="questionCaptions">
+	        <span>{{question.leftTitle}}</span>
+	        <span>{{question.centerTitle}}</span>
+	        <span>{{question.rightTitle}}</span>
+	    </div>
+	</div>
+
+	<div class="saveScore">
+		<button ng-disabled="vm.disableForm" ng-click="vm.save()">Save</button>
+	</div>
+
 </div>
