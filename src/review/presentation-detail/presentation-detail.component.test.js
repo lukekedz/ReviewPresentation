@@ -165,7 +165,7 @@ describe('PresentationDetailComponent', () => {
 
 			expect(caught).to.equal(true);
 		});
-		
+
 		it('should throw if score is not an integer', () => {
 			let caught = false;
 			let question = new Question(ID, TEXT, TEXT, TEXT, TEXT);
@@ -352,33 +352,33 @@ describe('PresentationDetailComponent', () => {
 
 			stubFilterInteger.restore();
 
-            // unable to run restore?? test passes.
+			// unable to run restore?? test passes.
 			//stubGetPresentation.restore();
 			stubGetQuestions.restore();
 		});
 	});
 
-    describe('filterInteger', () => {
+	describe('filterInteger', () => {
 
-        it('should return NaN if value is aa', () => {
-            let sut = new PresentationDetailComponent(dataService);
-            expect(sut.filterInteger('aa')).to.be.NaN;
-        });
+		it('should return NaN if value is aa', () => {
+			let sut = new PresentationDetailComponent(dataService);
+			expect(sut.filterInteger('aa')).to.be.NaN;
+		});
 
-        it('should return NaN if value is undefined', () => {
-            let sut = new PresentationDetailComponent(dataService);
-            expect(sut.filterInteger()).to.be.NaN;
-        });
+		it('should return NaN if value is undefined', () => {
+			let sut = new PresentationDetailComponent(dataService);
+			expect(sut.filterInteger()).to.be.NaN;
+		});
 
-        it('should return NaN if value is 999c', () => {
-            let sut = new PresentationDetailComponent(dataService);
-            expect(sut.filterInteger('999c')).to.be.NaN;
-        });
+		it('should return NaN if value is 999c', () => {
+			let sut = new PresentationDetailComponent(dataService);
+			expect(sut.filterInteger('999c')).to.be.NaN;
+		});
 
-        it('should return 50 if value is 50', () => {
-            let sut = new PresentationDetailComponent(dataService);
-            expect(sut.filterInteger(50)).to.equal(50);
-        });
-    });
+		it('should return 50 if value is 50', () => {
+			let sut = new PresentationDetailComponent(dataService);
+			expect(sut.filterInteger(50)).to.equal(50);
+		});
+	});
 
 });

@@ -1,4 +1,4 @@
-module.exports = function (config) {
+module.exports = function(config) {
 	'use strict';
 	config.set({
 		autoWatch: false,
@@ -12,8 +12,8 @@ module.exports = function (config) {
 		files: [
 			'node_modules/babel-polyfill/dist/polyfill.js',
 			'jspm_packages/system-polyfills.js',
-      		'jspm_packages/npm/angular@1.5.8/angular.js',
-      		'jspm_packages/npm/angular-mocks@1.5.8/angular-mocks.js'
+			'jspm_packages/npm/angular@1.5.8/angular.js',
+			'jspm_packages/npm/angular-mocks@1.5.8/angular-mocks.js'
 		],
 
 		jspm: {

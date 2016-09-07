@@ -7,14 +7,14 @@ export default class Question {
 		if(!title) {
 			throw new Error('title is undefined, null, or is an empty string');
 		}
-		if (!leftTitle) {
-		    throw new Error('leftTitle is undefined, null, or is an empty string');
+		if(!leftTitle) {
+			throw new Error('leftTitle is undefined, null, or is an empty string');
 		}
-		if (!centerTitle) {
-		    throw new Error('centerTitle is undefined, null, or is an empty string');
+		if(!centerTitle) {
+			throw new Error('centerTitle is undefined, null, or is an empty string');
 		}
-		if (!rightTitle) {
-		    throw new Error('rightTitle is undefined, null, or is an empty string');
+		if(!rightTitle) {
+			throw new Error('rightTitle is undefined, null, or is an empty string');
 		}
 
 		this.id = id;

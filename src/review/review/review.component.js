@@ -1,2 +1,1 @@
-export default class ReviewComponent {
-}
+export default class ReviewComponent {}

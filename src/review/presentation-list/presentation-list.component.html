@@ -1,15 +1,17 @@
 <div ng-if="vm.unreviewedPresentations.length > 0">
-    <h3>{{vm.unreviewedTitle}}</h3>
+	<h3>{{vm.unreviewedTitle}}</h3>
 
-    <div ng-repeat="item in vm.unreviewedPresentations">
-        <span class="presentationListItem"><a ng-link="['PresentationDetail', {id: item.id}]">{{item.title}}</a></span>
-    </div>
+	<div ng-repeat="item in vm.unreviewedPresentations">
+		<span class="presentationListItem">
+			<a ng-link="['PresentationDetail', {id: item.id}]">{{item.title}}</a>
+		</span>
+	</div>
 </div>
 
 <div ng-if="vm.reviewedPresentations.length > 0">
-    <h3>{{vm.reviewedTitle}}</h3>
+	<h3>{{vm.reviewedTitle}}</h3>
 
-    <div ng-repeat="item in vm.reviewedPresentations">
-        <span class="presentationListItem">{{item.title}}, Score: {{item.totalScore}} out of {{item.maximumScore}}</span>
-    </div>
+	<div ng-repeat="item in vm.reviewedPresentations">
+		<span class="presentationListItem">{{item.title}}, Score: {{item.totalScore}} out of {{item.maximumScore}}</span>
+	</div>
 </div>

@@ -18,7 +18,7 @@ export default class PresentationDetailComponent {
 
 	save() {
 		this.checkIsFormValid();
-		if (this.disableForm) {
+		if(this.disableForm) {
 			throw new Error('form is invalid');
 		}
 		this.dataService.reviewPresentation(this.presentation, this.questions);
@@ -70,7 +70,7 @@ export default class PresentationDetailComponent {
 		}
 
 		id = parseInt(id);
-		if (id > Number.MAX_SAFE_INTEGER) {
+		if(id > Number.MAX_SAFE_INTEGER) {
 			this.errorText = INVALIDPARAMETER + ' 5';
 			return;
 		}

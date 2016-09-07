@@ -1,5 +1,5 @@
 // load framework modules
-import angular from  'angular';
+import angular from 'angular';
 import ngComponentRouter from 'ngcomponentrouter';
 
 // load application Angular modules
@@ -13,6 +13,6 @@ let mainModule = angular.module('main', [ngComponentRouter, app, review]);
 mainModule.value('$routerRootComponent', 'root');
 
 angular.element(document).ready(() => {
-    // bootstrap angular now that all modules have been loaded
-    angular.bootstrap(document, [mainModule.name], {strictDi: true});
+	// bootstrap angular now that all modules have been loaded
+	angular.bootstrap(document, [mainModule.name], { strictDi: true });
 });

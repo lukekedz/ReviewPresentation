@@ -3,15 +3,15 @@ import _ from 'lodash';
 
 export default class GradeComponent {
 
-		icons;
-    score;
+	icons;
+	score;
 
-		// angularjs 1.5 lifecycle hook for initializing controller
+	// angularjs 1.5 lifecycle hook for initializing controller
 	$onInit() {
 		this.initializeIcons();
 	}
 
-// angularjs 1.5 lifecycle hook, called whenever one-way bindings are updated.
+	// angularjs 1.5 lifecycle hook, called whenever one-way bindings are updated.
 	$onChanges() {
 		this.initializeIcons();
 	}
