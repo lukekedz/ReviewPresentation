@@ -1,5 +1,9 @@
 # Review Presentation
-This the source code to the Code Camp Presentation: Testable, ES2015, AngularJS 1.5.x Component based Applications
+This the source code to the Code Camp Presentation: Testable, ES2015, AngularJS 1.5.x Component based Applications.
+
+The below image pictures the review of a session.  The GradeComponent provides UI for grading the question.
+
+<img src="https://github.com/Oceanware/ReviewPresentation/blob/master/Art/ScreenShot.png" width="500"/>
 
 ## Roadmap
 
