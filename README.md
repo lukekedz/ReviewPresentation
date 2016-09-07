@@ -42,3 +42,15 @@ npm run start
 ```
 
 This application has an in-memory database; each time the browser is opened, a fresh database is loaded. Additionally,  refreshing the browser will cause the AngularJS application to restart and refresh the database.
+
+## Learning Links
+
+- https://docs.angularjs.org/guide
+- https://docs.angularjs.org/api
+- http://exploringjs.com/
+- http://blog.thoughtram.io/angularjs/2016/03/29/exploring-angular-1.5-lifecycle-hooks.html
+- https://github.com/ericdouglas/ES6-Learning
+- https://www.youtube.com/watch?v=A1HhhICKl2Q
+
+ 
+
