@@ -51,7 +51,7 @@ This application has an in-memory database; each time the browser is opened, a f
 - http://exploringjs.com/
 - https://www.pluralsight.com/courses/building-components-angular-1-5
 - http://jspm.io/
+- https://github.com/systemjs/systemjs
 - http://blog.thoughtram.io/angularjs/2016/03/29/exploring-angular-1.5-lifecycle-hooks.html
 - https://github.com/ericdouglas/ES6-Learning
 - https://www.youtube.com/watch?v=A1HhhICKl2Q
-- https://github.com/systemjs/systemjs
