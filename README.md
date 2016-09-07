@@ -35,3 +35,5 @@ npm run mocha
 ```shell
 npm run start
 ```
+
+This application has an in-memory database; each time the browser is opened, a fresh database is loaded. Additionally,  refreshing the browser will cause the AngularJS application to restart and refresh the database.
