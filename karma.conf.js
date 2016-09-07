@@ -1,8 +1,8 @@
 module.exports = function (config) {
 	'use strict';
 	config.set({
-		autoWatch: true,
-		singleRun: false,
+		autoWatch: false,
+		singleRun: true,
 
 		logLevel: config.LOG_INFO,
 		basePath: '',

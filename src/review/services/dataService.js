@@ -11,7 +11,6 @@ export default class DataService {
 
 	__presentations = [];
 	__questions = [];
-	__reviews = [];
 
 	constructor() {
 		this.__createDatabase();

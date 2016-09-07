@@ -6,6 +6,7 @@ import ngComponentRouter from 'ngcomponentrouter';
 import app from './app/app.module';
 import review from './review/review.module'
 
+// create main module
 let mainModule = angular.module('main', [ngComponentRouter, app, review]);
 
 // must tell the Component Router which top level component to navigate components into

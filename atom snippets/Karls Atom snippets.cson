@@ -1,0 +1,287 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+# Each scope (e.g. '.source.coffee' above) can only be declared once.
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'.source.js':
+  'Fat Arrow':
+    'prefix': 'fat'
+    'body': '() => {}'
+  'describe unit test':
+    'prefix': 'dsc'
+    'body': """
+        describe('$1', () => {
+            $2
+        });
+
+    """
+  'new unit test file':
+    'prefix': 'unitTestFile'
+    'body': """
+        import $1 from './$2';
+
+        describe('$1', () => {
+
+            describe('constructor', () => {
+
+                $3
+            });
+        });
+
+    """
+  'unit test it':
+    'prefix': 'itt'
+    'body': """
+        it('should $1', () => {
+            $2
+        });
+
+    """
+  'unit test it should have property equal':
+    'prefix': 'itPropertyEqual'
+    'body': """
+        it('should have property $1 equal to $2', () => {
+            let sut = new $3();
+            expect(sut.$1).to.equal($2);
+        });
+        $4
+
+    """
+  'Unit Test for Object has Property':
+    'prefix': 'itHasProperty'
+    'body': """
+        it('should have property $1', () => {
+            let sut = new $2();
+            expect(sut).to.have.property('$1');
+        });
+        $3
+
+    """
+  'Class with Constructor':
+    'prefix': 'cctor'
+    'body': """
+        export default class $1 {
+
+            constructor () {
+                $2
+            }
+        }
+
+    """
+  'Method Maker':
+    'prefix': 'mm'
+    'body': """
+        $1($2) {
+            $3
+        }
+
+    """
+  'Before Each':
+    'prefix': 'bfe'
+    'body': """
+        beforeEach(() => {
+            $1
+        });
+
+    """
+  'Guard Clause Object':
+    'prefix': 'gco'
+    'body': """
+        if (!$1) {
+            throw new Error('$1 is undefined or null');
+        }
+        $2
+
+    """
+  'Unit Test for Object Guard Clause':
+    'prefix': 'gcObjectUnitTest'
+    'body': """
+        it('should throw if $1 is undefined or null', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2(undefined);
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined or null');
+            }
+
+            expect(caught).to.equal(true);
+        });
+        $3
+
+    """
+  'Guard Clause Object with Type Check':
+    'prefix': 'gcoTypeCheck'
+    'body': """
+        if (!$1 || ($1 instanceof $2)) {
+            throw new Error('$1 is undefined, null or not a $2');
+        }
+        $3
+
+    """
+  'Unit Test for Object with Type Check Guard Clause':
+    'prefix': 'gcObjectTypeCheckUnitTest'
+    'body': """
+        it('should throw if $1 is undefined or null', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2(undefined);
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined, null or not a $3');
+            }
+
+            expect(caught).to.equal(true);
+        });
+
+        it('should throw if $1 is not a $3', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2({});
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined, null or not a $3');
+            }
+
+            expect(caught).to.equal(true);
+        });
+        $4
+
+    """
+  'Guard Clause Array':
+    'prefix': 'gca'
+    'body': """
+        if (!$1 || $1.length === 0 || !Array.isArray($1)) {
+            throw new Error('$1 is undefined, null, has no array items, or is not an array');
+        }
+        $2
+
+    """
+  'Unit Tests for Array Guard Clause':
+    'prefix': 'gcArrayUnitTests'
+    'body': """
+        it('should throw if $1 is undefined or null', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2(undefined);
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined, null, has no array items, or is not an array');
+            }
+
+            expect(caught).to.equal(true);
+        });
+        it('should throw if $1 is not an array', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2('emptystring');
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined, null, has no array items, or is not an array');
+            }
+
+            expect(caught).to.equal(true);
+        });
+        it('should throw if $1 is an empty array', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2([]);
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined, null, has no array items, or is not an array');
+            }
+
+            expect(caught).to.equal(true);
+        });
+        $3
+
+    """
+  'Guard Clause String':
+    'prefix': 'gcs'
+    'body': """
+        if (!$1) {
+            throw new Error('$1 is undefined, null, or is an empty string');
+        }
+        $2
+
+    """
+  'Unit Test for String Guard Clause':
+    'prefix': 'gcStringUnitTest'
+    'body': """
+        it('should throw if $1 is undefined, null, or is an empty string', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2(undefined);
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined, null, or is an empty string');
+            }
+
+            expect(caught).to.equal(true);
+        });
+        $3
+
+    """
+  'Guard Clause Integer':
+    'prefix': 'gci'
+    'body': """
+        if (!$1 || !Number.isInteger($1)) {
+            throw new Error('$1 is undefined, null, or is not an integer');
+        }
+        $2
+
+    """
+  'Unit Test for Intger Guard Clause':
+    'prefix': 'gcIntegerUnitTest'
+    'body': """
+        it('should throw if $1 is undefined or null', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2(undefined);
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined, null, or is not an integer');
+            }
+
+            expect(caught).to.equal(true);
+        });
+        it('should throw if $1 is not an integer', () => {
+            let caught = false;
+
+            try {
+                let sut = new $2('abc');
+            } catch (e) {
+                caught = true;
+                expect(e.message).to.equal('$1 is undefined, null, or is not an integer');
+            }
+
+            expect(caught).to.equal(true);
+        });
+        $3
+
+    """
