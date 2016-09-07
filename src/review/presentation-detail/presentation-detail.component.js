@@ -45,6 +45,8 @@ export default class PresentationDetailComponent {
 		this.disableForm = check !== undefined;
 	}
 
+	// invoked when the component is routed it.
+	// route params are passed as part of the action object
 	$routerOnActivate(action) {
 		const INVALIDPARAMETER = 'Invalid parameter';
 

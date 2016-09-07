@@ -1,6 +1,5 @@
 ./src/**/*.test.js
 --require ./test/common.js
---require mocha
 --compilers js:babel-core/register
 --recursive
 --bail

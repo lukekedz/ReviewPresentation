@@ -165,6 +165,7 @@ describe('PresentationDetailComponent', () => {
 
 			expect(caught).to.equal(true);
 		});
+		
 		it('should throw if score is not an integer', () => {
 			let caught = false;
 			let question = new Question(ID, TEXT, TEXT, TEXT, TEXT);

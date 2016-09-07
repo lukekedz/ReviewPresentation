@@ -1,12 +1,12 @@
 {
   "name": "review-presentation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Source code for Code Camp Presentation: Testable, ES2015, AngularJS 1.5.x Component Based Applications",
   "main": "",
   "scripts": {
+    "postinstall": "jspm install",
     "start": "lite-server",
     "karma": "karma start",
-    "postinstall": "jspm install",
     "mocha": "./node_modules/.bin/_mocha",
     "watch": "./node_modules/.bin/_mocha --watch"
   },
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Oceanware/review-presentation.git"
+    "url": "https://github.com/Oceanware/ReviewPresentation.git"
   },
   "bugs": {
     "url": "https://github.com/Oceanware/ReviewPresentation/issues"
   },
-  "homepage": "https://github.com/oceanware/review-presentation",
+  "homepage": "https://github.com/oceanware/ReviewPresentation",
   "license": "MIT",
   "eslintConfig": {
     "extends": [

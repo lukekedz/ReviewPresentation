@@ -31,7 +31,7 @@ npm install -g jspm
 ```shell
 npm install
 ```
-**Windows users** will need to run 'npm install' twice to get around a phantom.js install error.
+**Windows User Please Note:** during testing, one time I had to run 'npm install' twice to get around a package install error.
 
 - Run the mocha unit tests
 ```shell
