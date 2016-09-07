@@ -1,5 +1,5 @@
 # Review Presentation
-This the source code to the Code Camp Presentation: Testable, ES2015, AngularJS 1.5.x Component based Applications.
+Source code for the Code Camp Presentation: Testable, ES2015, AngularJS 1.5.x Component based Applications.
 
 The below image pictures the review of a session.  The GradeComponent provides UI for grading the question.
 
@@ -55,7 +55,3 @@ This application has an in-memory database; each time the browser is opened, a f
 - https://github.com/ericdouglas/ES6-Learning
 - https://www.youtube.com/watch?v=A1HhhICKl2Q
 - https://github.com/systemjs/systemjs
- 
-
- 
-
