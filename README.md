@@ -10,6 +10,7 @@ The below image pictures the review of a session.  The GradeComponent provides U
 - [ ] Add Karma integration tests.
 - [ ] Add jspm build script to bundle and minify.
 - [ ] Investiage getting istanbul to run when mocha tests are transpiled on the fly.  May have to transpile to folder.
+- [ ] Add blog post about this project and unit testing.
 
 ## Prerequisites
 Before you can run this code locally on your system, you'll need to load the following software:
