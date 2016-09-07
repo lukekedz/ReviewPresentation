@@ -1,4 +1,11 @@
 # Review Presentation
+This the source code to the Code Camp Presentation: Testable, ES2015, AngularJS 1.5.x Component based Applications
+
+## Roadmap
+
+- [ ] Add Karma integration tests.
+- [ ] Add jspm build script to bundle and minify.
+- [ ] Investiage getting istanbul to run when mocha tests are transpiled on the fly.  May have to transpile to folder.
 
 ## Prerequisites
 Before you can run this code locally on your system, you'll need to load the following software:
