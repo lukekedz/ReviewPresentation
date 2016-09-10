@@ -22,7 +22,7 @@ describe('RootComponent', () => {
 
 	it('should have the correct items in the array', () => {
 		let correctItems = [{
-			title: constants.CODECAMPENAME,
+			title: constants.CODECAMPNAME,
 			link: ['Home']
 		}, {
 			title: 'Home',

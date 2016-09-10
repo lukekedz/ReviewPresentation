@@ -12,7 +12,7 @@ describe('HomeComponent', () => {
 		expect(sut).to.have.property('constants');
 	});
 
-	it('should have constants property CODECAMPENAME', () => {
-		expect(sut.constants.CODECAMPENAME).to.equal(constants.CODECAMPENAME);
+	it('should have constants property CODECAMPNAME', () => {
+		expect(sut.constants.CODECAMPNAME).to.equal(constants.CODECAMPNAME);
 	})
 });

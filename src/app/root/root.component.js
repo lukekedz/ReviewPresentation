@@ -4,7 +4,7 @@ export default class RootComponent {
 
 	constructor() {
 		this.items = [{
-			title: constants.CODECAMPENAME,
+			title: constants.CODECAMPNAME,
 			link: ['Home']
 		}, {
 			title: 'Home',
