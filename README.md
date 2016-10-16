@@ -5,14 +5,6 @@ The below image pictures the review of a session.  The GradeComponent provides U
 
 <img src="https://github.com/Oceanware/ReviewPresentation/blob/master/Art/ScreenShot.png" width="500"/>
 
-## Roadmap
-
-- [ ] Add ESLint
-- [ ] Add Karma integration tests
-- [ ] Add jspm build script to bundle and minify
-- [ ] Investiage getting istanbul to run when mocha tests are transpiled on the fly.  May have to transpile to folder.
-- [ ] Add blog post about this project and unit testing
-
 ## Prerequisites
 Before you can run this code locally on your system, you'll need to load the following software:
 
@@ -23,19 +15,30 @@ Before you can run this code locally on your system, you'll need to load the fol
 npm install -g jspm
 ```
 
-## Run The App!
+## Running The App and Unit Tests
 
-- Download or clone this repro.
+- Download or clone this repo.
 
 - Open a terminal window at the root folder and run the following commands:
 ```shell
 npm install
 ```
+
 **Windows User Please Note:** during testing, one time I had to run 'npm install' twice to get around a package install error.
 
 - Run the mocha unit tests
 ```shell
 npm run mocha
+```
+
+- Continuously run mocha unit tests as files are changed and saved
+```shell
+npm run watch
+```
+
+- Run the mocha unit tests and Istanbul code coverage
+```shell
+npm run coverage
 ```
 
 - Run the website

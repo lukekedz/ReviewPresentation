@@ -5,8 +5,8 @@
 	"main": "",
 	"scripts": {
 		"postinstall": "jspm install",
+		"coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha",
 		"start": "lite-server",
-		"karma": "karma start",
 		"mocha": "./node_modules/.bin/_mocha",
 		"watch": "./node_modules/.bin/_mocha --watch"
 	},
@@ -24,6 +24,10 @@
 	"homepage": "https://github.com/oceanware/ReviewPresentation",
 	"license": "MIT",
 	"eslintConfig": {
+		"env": {
+			"mocha": true,
+			"jasmine": true
+		},
 		"extends": [
 			"eslint:recommended"
 		],
@@ -48,17 +52,14 @@
 		"babel-preset-stage-0": "^6.5.0",
 		"babel-register": "^6.14.0",
 		"chai": "^3.5.0",
+		"gulp": "^3.9.1",
+		"gulp-eslint": "^3.0.1",
+		"gulp-htmlhint": "^0.3.1",
+		"gulp-watch": "^4.3.10",
+		"istanbul": "^1.0.0-alpha.2",
 		"jasmine": "^2.3.1",
 		"jasmine-core": "^2.3.4",
 		"jspm": "^0.16.13",
-		"karma": "^0.13.14",
-		"karma-babel-preprocessor": "^6.0.1",
-		"karma-chrome-launcher": "^1.0.1",
-		"karma-jasmine": "^0.3.6",
-		"karma-jspm": "^2.0.2",
-		"karma-mocha-reporter": "^2.1.0",
-		"karma-phantomjs-launcher": "^0.2.0",
-		"karma-sourcemap-loader": "^0.3.5",
 		"lite-server": "^2.2.2",
 		"mocha": "^3.0.2",
 		"phantomjs": "^1.9.17",
