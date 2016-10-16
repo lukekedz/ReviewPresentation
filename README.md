@@ -46,6 +46,16 @@ npm run coverage
 npm run start
 ```
 
+- Run ES6 and HTML linters
+```shell
+gulp
+```
+
+- Continuously run ES6 and HTML linters
+```shell
+gulp watch
+```
+
 This application has an in-memory database; each time the browser is opened, a fresh database is loaded. Additionally,  refreshing the browser will cause the AngularJS application to restart and refresh the database.
 
 ## Learning Links
