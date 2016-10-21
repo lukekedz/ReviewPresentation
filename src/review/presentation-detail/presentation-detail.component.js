@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import Question from '../model/question';
+import reviewContants from '../reviewConstants';
+
 export default class PresentationDetailComponent {
 
 	questions;
@@ -32,8 +34,8 @@ export default class PresentationDetailComponent {
 		if(!score || !Number.isInteger(score)) {
 			throw new Error('score is undefined, null, or is not an integer');
 		}
-		if(score < 0 || score > 10) {
-			throw new Error('score out of range 0-10');
+		if(score < 0 || score > reviewContants.MAXSCORE) {
+			throw new Error(`score out of range 0-${reviewContants.MAXSCORE}`);
 		}
 
 		question.score = score;

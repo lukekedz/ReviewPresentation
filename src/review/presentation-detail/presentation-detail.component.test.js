@@ -1,6 +1,7 @@
 import PresentationDetailComponent from './presentation-Detail.Component';
 import Question from '../model/question';
 import Presentation from '../model/presentation';
+import reviewContants from '../reviewConstants';
 
 describe('PresentationDetailComponent', () => {
 
@@ -190,7 +191,7 @@ describe('PresentationDetailComponent', () => {
 				sut.scoreSelected(question, -1)
 			} catch(e) {
 				caught = true;
-				expect(e.message).to.equal('score out of range 0-10');
+				expect(e.message).to.equal(`score out of range 0-${reviewContants.MAXSCORE}`);
 			}
 
 			expect(caught).to.equal(true);
@@ -353,6 +354,7 @@ describe('PresentationDetailComponent', () => {
 			stubFilterInteger.restore();
 
 			// unable to run restore?? test passes.
+			// unable to figure out why this next line fails.
 			//stubGetPresentation.restore();
 			stubGetQuestions.restore();
 		});

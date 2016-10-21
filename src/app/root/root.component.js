@@ -13,6 +13,10 @@ export default class RootComponent {
 			title: 'Review',
 			link: ['Review', 'PresentationList']
 		}];
+
+		// since PresentationList is the default Component
+		// I didn't have to pass it as part of the array.
+		// Here for clarirty.
 	}
 
 }
