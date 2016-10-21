@@ -1,7 +1,8 @@
 import { assert } from 'chai';
-import sinon from 'sinon';
 import PresentationListComponent from './presentation-list.component';
 import Presentation from '../model/presentation';
+
+// this file uses the assert syntax to allow you to compare the BDD and TDD style of expectations and asserts.
 
 describe('PresentationListComponent', () => {
 	let vm = undefined;

@@ -1,7 +1,7 @@
 import angular from 'angular';
+import ngComponentRouter from 'ngcomponentrouter';
 import RootComponent from './root/root.component';
 import HomeComponent from './home/home.component';
-import ngComponentRouter from 'ngcomponentrouter';
 
 export default angular
 	.module('main.app', [ngComponentRouter])
